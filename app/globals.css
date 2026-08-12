@@ -1,22 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #020617;
-  --foreground: #f8fafc;
+  --bg-main: #FAF7F2;
+  --bg-card: #FFFFFF;
+  --bg-card-alt: #F4EFE6;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-subtle: #64748B;
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-strong: rgba(15, 23, 42, 0.16);
+  --accent-teal: #0D9488;
+  --accent-teal-hover: #0F766E;
+  --accent-teal-light: rgba(13, 148, 136, 0.1);
+  --accent-gold: #D97706;
+  --accent-gold-bright: #F59E0B;
+  --accent-gold-bg: rgba(245, 158, 11, 0.12);
+  --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.04), 0 4px 12px -2px rgba(0, 0, 0, 0.02);
+  --shadow-card-hover: 0 20px 40px -10px rgba(0, 0, 0, 0.08), 0 8px 16px -4px rgba(0, 0, 0, 0.04);
+  --hero-ring: #FBEBD2;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --bg-main: #0E1626;
+  --bg-card: #162238;
+  --bg-card-alt: #1C2B47;
+  --text-main: #F8FAFC;
+  --text-muted: #CBD5E1;
+  --text-subtle: #94A3B8;
+  --border-subtle: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.2);
+  --accent-teal: #14B8A6;
+  --accent-teal-hover: #2DD4BF;
+  --accent-teal-light: rgba(20, 184, 166, 0.15);
+  --accent-gold: #F59E0B;
+  --accent-gold-bright: #FBBF24;
+  --accent-gold-bg: rgba(245, 158, 11, 0.2);
+  --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.35);
+  --shadow-card-hover: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+  --hero-ring: #2A3854;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+* {
+  box-sizing: border-box;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
-::selection { background: #67e8f9; color: #020617; }
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+.font-cursive {
+  font-family: 'Caveat', cursive;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 4s ease-in-out 2s infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--accent-gold);
+  color: #FFFFFF;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-teal);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-teal-hover);
+}

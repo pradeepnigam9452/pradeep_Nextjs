@@ -2,39 +2,151 @@ import {
   Code2,
   GraduationCap,
   Briefcase,
-  Award,
   Rocket,
   Heart,
   Coffee,
   BookOpen,
-  Zap,
-  Database,
-  Server,
-  Cloud,
   Mail,
   MapPin,
   Phone,
-  
+  FileCode,
+  Palette,
+  Zap,
+  Globe,
+  Layout,
+  Server,
+  Cpu,
+  Network,
+  Database,
+  GitBranch,
+  Send,
+  Cloud,
+  CheckCircle2, KeyRound
 } from "lucide-react";
 
-import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiTwitter, FiInstagram, FiMessageSquare } from "react-icons/fi";
+import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 
+import PROJECT_IMG_1 from "./assets/ct.png";
+import PROJECT_IMG_2 from "./assets/task.png";
+import PROJECT_IMG_4 from "./assets/wethere.png";
+import PROJECT_IMG_6 from "./assets/book.png";
+import PROJECT_IMG_7 from "./assets/pro.png";
+import PROJECT_IMG_8 from "./assets/portfolio.png";
+import PROJECT_IMG_9 from "./assets/demo1.png";
+import PROJECT_IMG_10 from "./assets/food.png";
+import PROJECT_IMG_11 from "./assets/gocart.png";
+
+// Live project images 
+import Live_img_1 from "./assets/live (3).png";
+import Live_img_2 from "./assets/live (2).png";
+import Live_img_3 from "./assets/live (1).png";
+import Live_img_4 from "./assets/live (4).png";
+import Live_img_5 from "./assets/live (5).png";
 
 export const PERSONAL_INFO = {
   name: "Pradeep Nigam",
-  role: "Full Stack Developer",
-  location: "Bhopal, Madhya Pradesh",
-  bio: "I build modern, responsive and scalable web applications.",
+  greeting: "Hi, I Am",
+  nameHighlight: "Pradeep Nigam.",
+  roleHighlight: "Full Stack Developer.",
+  role: "MERN Stack Developer | Next.js Developer |  Native Developer",
+  shortRole: "Full Stack Developer",
+  location: "Bhopal, Madhya Pradesh, India",
+  bio: "I build modern, scalable and user-friendly web applications using React, Next.js, Node.js, Express.js and MongoDB. Available for freelance work and professional opportunities.",
+  aboutText:
+    "I am a passionate MERN Stack and Next.js developer who loves transforming ideas into functional, production-ready applications. With experience in designing scalable RESTful APIs, building responsive frontends, and managing MongoDB databases, I focus on delivering seamless user experiences and maintainable architecture.",
   email: "pradeepnigam9452@gmail.com",
   phone: "+91 8305729451",
+  whatsapp: "https://wa.me/918305729451?text=Hi%20Pradeep%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project%20with%20you.",
+  whatsappNumber: "918305729451",
+  instagram: "https://www.instagram.com/_prince_nigam",
+  instagramHandle: "@_prince_nigam",
   github: "https://github.com/pradeepnigam9452",
   linkedin: "https://www.linkedin.com/in/pradeep-nigam-601a85269",
   leetcode: "https://leetcode.com/u/pradeep_nigam/",
+  resume: "/Pradeep_Nigam_Resume.pdf",
+  profileImage: MEE_IMG,
+  status: "Available for Freelance & Projects",
+};
+
+// ===================== STATS =====================
+export const STATS = [
+  { number: "01+", label: "YEARS EXPERIENCE", highlight: true },
+  { number: "10+", label: "PROJECTS COMPLETED", highlight: false },
+  { number: "05+", label: "TECH STACK MASTERED", highlight: false },
+];
+
+// ===================== WORK EXPERIENCE =====================
+export const WORK_EXPERIENCE = {
+  company: "Binarylogix Technology LLP",
+  position: "MERN Stack Developer Intern",
+  period: "Recent / Ongoing",
+  location: "Bhopal, MP",
+  type: "Internship",
+  summary:
+    "Architecting and developing production web applications, administrative tools, and internal management platforms using the MERN stack ecosystem.",
+  skills: [
+    "MERN Stack",
+    "Next.js",
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "REST APIs",
+    "Staff Management Systems",
+    "Attendance Management",
+    "Leave Management",
+    "Project Management",
+  ],
+  responsibilities: [
+    "Developed staff management systems with role-based access control and dashboard analytics.",
+    "Built attendance management system allowing automated clock-in/out and record exports.",
+    "Implemented leave management workflow for employee requests and manager approvals.",
+    "Created project management features for task tracking and progress reporting.",
+    "Designed and tested REST APIs using Node.js, Express.js, and MongoDB.",
+    "Engineered responsive user interfaces with React.js, Next.js, and Tailwind CSS.",
+  ],
+};
+
+// ===================== SKILLS CATEGORIZED =====================
+
+
+export const SKILLS_CATEGORIZED = {
+  Frontend: [
+    { name: "HTML5", icon: FileCode },
+    { name: "CSS3", icon: Palette },
+    { name: "JavaScript", icon: Zap },
+    { name: "React.js", icon: Code2 },
+    { name: "Next.js", icon: Globe },
+    { name: "Tailwind CSS", icon: Layout },
+  ],
+
+  Backend: [
+    { name: "Node.js", icon: Server },
+    { name: "Express.js", icon: Cpu },
+    { name: "REST APIs", icon: Network },
+    { name: "JWT Authentication", icon: KeyRound },
+    { name: "Nodemailer", icon: Mail },
+  ],
+
+  Database: [
+    { name: "MongoDB", icon: Database },
+    { name: "MySQL", icon: Database },
+    { name: "Mongoose", icon: Database },
+  ],
+
+  Other: [
+    { name: "Git", icon: GitBranch },
+    { name: "GitHub", icon: FiGithub },
+    { name: "Postman", icon: Send },
+    { name: "VS Code", icon: Code2 },
+    { name: "Firebase", icon: Cloud },
+    { name: "Cloudinary", icon: Cloud },
+  ],
 };
 
 
 
-// ===================== TECH STACK =====================
 export const TECH_STACK = [
   "JavaScript",
   "HTML5",
@@ -46,92 +158,65 @@ export const TECH_STACK = [
   "Node.js",
   "Express.js",
   "MongoDB",
- 
+  "MySQL",
+  "Git",
+  "GitHub",
+  "Postman",
 ];
 
-// ===================== STATS =====================
-export const STATS = [
-  { number: "10+", label: "Projects Completed" },
-  { number: "1+", label: "Years Experience" },
-  { number: "5+", label: "Technologies" },
-];
-
-
-// // ===================== CERTIFICATES =====================
-import CERT_2 from "./assets/full_stack.jpeg";
+import MEE_IMG from "./assets/mee.jpeg";
 import CERT_1 from "./assets/hakerrank.png";
+import CERT_2 from "./assets/full_stack.jpeg";
 import CERT_3 from "./assets/45days.png";
 import CERT_4 from "./assets/js.png";
 import CERT_5 from "./assets/FSD.png";
 
-
-
-import PROJECT_IMG_1 from "./assets/ct.png";
-import PROJECT_IMG_2 from "./assets/task.png";
-import PROJECT_IMG_4 from "./assets/wethere.png";
-import PROJECT_IMG_6 from "./assets/book.png"
-import PROJECT_IMG_7 from "./assets/pro.png";
-import PROJECT_IMG_8 from "./assets/portfolio.png";
-import PROJECT_IMG_9 from "./assets/demo1.png"
-import PROJECT_IMG_10 from "./assets/food.png"
-import PROJECT_IMG_11 from "./assets/gocart.png" 
-
-// live project image 
-
-import Live_img_1 from "./assets/live (3).png"
-import Live_img_2 from "./assets/live (2).png"
-import Live_img_3 from "./assets/live (1).png"
-import Live_img_4 from "./assets/live (4).png"
-import Live_img_5 from "./assets/live (5).png"
-
-
-
-// // …add more as needed!
+// ===================== CERTIFICATES =====================
 
 export const CERTIFICATES = [
   {
-    title: "java programming certificate by Hackerrank",
-    issuer: "Hackerrank",
-    year: "july 21, 2025",
-    // image: CERT_1,
+    title: "Java Programming Certificate",
+    issuer: "HackerRank",
+    year: "July 21, 2025",
+    image: CERT_1,
   },
   {
-    title: "Full stack Web Development certification by udemy",
-    issuer: "udemy",
+    title: "Full Stack Web Development Certification",
+    issuer: "Udemy",
     year: "July 26, 2024",
-    //image: CERT_2,
+    image: CERT_2,
   },
-    {
-    title: "Certification in Full Stack Web Development and Data Structures & Algorithms (DSA)",
+  {
+    title: "Certification in Full Stack Web Development & DSA",
     issuer: "Coding Thinker, Bhopal",
     year: "July 26, 2024",
-    //image: CERT_5,
+    image: CERT_5,
   },
-  
-    {
-    title: "java-script programming certificate by Hackerrank",
-    issuer: "Hackerrank",
-    year: "july 21, 2025",
-    //image: CERT_4,
+  {
+    title: "JavaScript Programming Certificate",
+    issuer: "HackerRank",
+    year: "July 21, 2025",
+    image: CERT_4,
   },
- {
-    title: "Coding thinker: Problem Solving and Programming",
-    issuer: "Codeing Thinker | SimpliLearn",
-    year: "26th July 2025",
-   // image: CERT_3,
+  {
+    title: "Problem Solving and Programming",
+    issuer: "Coding Thinker | Simplilearn",
+    year: "July 26, 2025",
+    image: CERT_3,
   },
-  
- 
 ];
 
-export const livePROJECTS = [
+// ===================== LIVE PROJECTS =====================
+export const LIVE_PROJECTS = [
   {
     id: 1,
     title: "Binarylogix Technology LLP Portfolio",
     description:
       "A full-stack company portfolio and staff-management platform featuring project showcases, career opportunities, attendance tracking, and administrative tools.",
+    role: "Full Stack MERN Developer",
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
     image: Live_img_1,
-    tags: ["React.js", "Node.js", "Express.js", "MongoDB"],
     liveUrl: "https://www.portfolio.binarylogix.in/careers",
     githubUrl: "",
     featured: true,
@@ -139,11 +224,13 @@ export const livePROJECTS = [
   },
   {
     id: 2,
-    title: "WPIFD",
+    title: "WPIFD Property Finder",
     description:
       "A property-discovery platform that allows users to browse, search, and explore property listings through an intuitive interface.",
-    image: Live_img_2,
+    role: "Full Stack Developer",
+    technologies: ["Node.js", "Express.js", "React.js", "MongoDB"],
     tags: ["Node.js", "Express.js", "React.js", "MongoDB"],
+    image: Live_img_2,
     liveUrl: "https://www.wpifd.com/",
     githubUrl: "",
     featured: true,
@@ -154,8 +241,10 @@ export const livePROJECTS = [
     title: "SaloonWala",
     description:
       "A responsive salon-services platform that helps users explore salon services and connect with beauty professionals through a user-friendly interface.",
+    role: "Frontend Specialist",
+    technologies: ["React.js", "Tailwind CSS", "JavaScript"],
+    tags: ["React.js", "Tailwind CSS", "JavaScript"],
     image: Live_img_3,
-    tags: ["React.js"],
     liveUrl: "https://www.saloonwala.in/",
     githubUrl: "",
     featured: true,
@@ -163,11 +252,13 @@ export const livePROJECTS = [
   },
   {
     id: 4,
-    title: "Vedvani",
+    title: "Vedvani Spiritual Platform",
     description:
       "A spiritual platform where users can explore pujas, understand their benefits, select puja types, and book religious services online.",
-    image: Live_img_4,
+    role: "MERN Stack Developer",
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB"],
     tags: ["React.js", "Node.js", "Express.js", "MongoDB"],
+    image: Live_img_4,
     liveUrl: "https://vedvani.org/",
     githubUrl: "",
     featured: true,
@@ -178,22 +269,23 @@ export const livePROJECTS = [
     title: "Best Advocate Bhopal",
     description:
       "A professional legal-services website that presents advocate expertise, practice areas, consultation details, and contact information.",
+    role: "Full Stack Web Developer",
+    technologies: ["Node.js", "React.js", "Tailwind CSS", "JavaScript"],
+    tags: ["Node.js", "React.js", "Tailwind CSS", "JavaScript"],
     image: Live_img_5,
-    tags: ["Node.js", "React.js","Tailwind CSS", "JavaScript"],
     liveUrl: "https://www.bestadvocatebhopal.com/",
     githubUrl: "",
     featured: true,
     category: "Business Website",
   },
- 
- 
- 
 ];
 
+export const livePROJECTS = LIVE_PROJECTS;
 
+// ===================== FEATURED PROJECTS =====================
 export const PROJECTS = [
   {
-    id: 1,
+    id: 6,
     title: "DemoTech Technology",
     description:
       "A full-stack web application that delivers a modern and responsive user experience with efficient backend and database integration.",
@@ -205,7 +297,7 @@ export const PROJECTS = [
     category: "MERN Stack",
   },
   {
-    id: 2,
+    id: 7,
     title: "Property Finder",
     description:
       "A property discovery platform that allows users to browse, search, and explore property listings through an easy-to-use interface.",
@@ -217,20 +309,20 @@ export const PROJECTS = [
     category: "Full Stack",
   },
   {
-    id: 3,
+    id: 8,
     title: "Personal Portfolio",
     description:
       "A responsive personal portfolio showcasing my projects, technical skills, professional experience, and development work.",
     image: PROJECT_IMG_8,
-    tags: ["React.js", "Tailwind CSS", "JavaScript"],
+    tags: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
     liveUrl: "https://pradeepnigam.vercel.app/",
     githubUrl: "https://github.com/pradeepnigam9452",
     featured: true,
     category: "Frontend",
   },
   {
-    id: 4,
-    title: "GoCard",
+    id: 9,
+    title: "GoCart E-Commerce",
     description:
       "A responsive e-commerce application that allows users to explore products, manage their cart, and enjoy a smooth shopping experience.",
     image: PROJECT_IMG_11,
@@ -241,7 +333,7 @@ export const PROJECTS = [
     category: "E-Commerce",
   },
   {
-    id: 5,
+    id: 10,
     title: "Food Ordering App",
     description:
       "A responsive food-ordering application that allows users to explore food items and interact with a clean, user-friendly interface.",
@@ -253,7 +345,7 @@ export const PROJECTS = [
     category: "Web App",
   },
   {
-    id: 6,
+    id: 11,
     title: "Weather App",
     description:
       "A responsive weather application featuring city and postcode search, autocomplete suggestions, real-time weather data, and a dynamic interface.",
@@ -265,8 +357,8 @@ export const PROJECTS = [
     category: "Web App",
   },
   {
-    id: 7,
-    title: "Book Store",
+    id: 12,
+    title: "Book Store App",
     description:
       "A full-stack bookstore application that allows users to browse and search for books through a responsive and user-friendly interface.",
     image: PROJECT_IMG_6,
@@ -277,7 +369,7 @@ export const PROJECTS = [
     category: "MERN Stack",
   },
   {
-    id: 8,
+    id: 13,
     title: "Coaching Center Management",
     description:
       "A management system designed to handle coaching-center operations, including students, courses, batches, staff, and real-time communication.",
@@ -289,8 +381,8 @@ export const PROJECTS = [
     category: "Full Stack",
   },
   {
-    id: 9,
-    title: "Task Management",
+    id: 14,
+    title: "Task Management Application",
     description:
       "A full-stack task management application featuring secure authentication, session handling, and complete CRUD operations.",
     image: PROJECT_IMG_2,
@@ -302,46 +394,60 @@ export const PROJECTS = [
   },
 ];
 
-
-
+// ===================== JOURNEY STEPS =====================
 export const JOURNEY_STEPS = [
   {
-    year: "2019",
-    title: "Completed 10th",
-    company: "Self-taught",
+    year: "april - 2026 - Present",
+    title: "MERN Stack Developer Intern",
+    company: "Binarylogix Technology LLP",
     description:
-      "Completed 10th at satna MP 77 %.",
-    icon: Code2,
-    color: "bg-blue-500",
+      "Engineered full-stack applications, staff management platforms, attendance tracking, and REST APIs using MongoDB, Express, React, Node.js, and Next.js.",
+    icon: Briefcase,
+    color: "bg-teal-600",
   },
   {
-    year: "2021",
-    title: "Completed 12th",
-    company: "Self-taught",
+    year: "Dec 2025 - Mar 2026",
+    title: "Frontend Developer Intern",
+    company: "Upstare Research — Bhopal",
     description:
-      "Completed My 12th with 74 %.",
+      "Developing responsive and user-friendly web applications using React.js and Next.js, implementing reusable UI components, integrating REST APIs, and optimizing applications for performance and responsiveness.",
     icon: Briefcase,
-    color: "bg-green-500",
+    color: "bg-teal-600",
+  },
+  {
+    year: "2022 - 2026",
+    title: "B.Tech in Computer Science & Engineering",
+    company: "IES University Bhopal",
+    description:
+      "Pursued B.Tech degree in CSE, gaining deep technical knowledge in Data Structures, Algorithms, Software Engineering, and Web Technologies.",
+    icon: GraduationCap,
+    color: "bg-amber-500",
   },
   {
     year: "2022",
-    title: "Started Coding Journey",
-    company: "Self-taught",
+    title: "Started Software Development Journey",
+    company: "Self-Driven Learning",
     description:
-      "Started coding Journey by taking admission to the course  ... B tech (CSE) in IES UNIVERSITY BHOPAL.",
+      "Built core programming foundations in JavaScript, Data Structures, Web Development, and algorithm problem solving.",
     icon: Rocket,
-    color: "bg-orange-500",
+    color: "bg-teal-600",
   },
   {
-    year: "2026",
-    title: "Completed Graduation",
-    company: "IES University Bhopal",
-    description: "Completed B.Tech in Computer Science Engineering from IES University Bhopal.",
-    icon: GraduationCap,
-    color: "bg-orange-500",
+    year: "2021",
+    title: "Completed Senior Secondary (12th)",
+    company: "High School Education",
+    description: "Completed 12th Grade with 74% with focus on Mathematics and Computer Science.",
+    icon: BookOpen,
+    color: "bg-stone-500",
   },
-  
-//   
+  {
+    year: "2019",
+    title: "Completed High School (10th)",
+    company: "Satna, MP",
+    description: "Completed 10th Grade at Satna, Madhya Pradesh with 77%.",
+    icon: CheckCircle2,
+    color: "bg-stone-400",
+  },
 ];
 
 // ===================== PASSIONS =====================
@@ -349,34 +455,93 @@ export const PASSIONS = [
   {
     icon: Heart,
     title: "User Experience",
-    description: "Crafting intuitive interfaces that users love.",
+    description: "Crafting intuitive, responsive interfaces that users enjoy.",
   },
   {
     icon: Coffee,
     title: "Problem Solving",
-    description: "Turning complex challenges into elegant solutions.",
+    description: "Turning complex backend and frontend challenges into clean solutions.",
   },
   {
     icon: BookOpen,
     title: "Continuous Learning",
-    description: "Always exploring new technologies and best practices.",
+    description: "Keeping pace with modern web stacks, Next.js updates, and best practices.",
   },
 ];
 
 // ===================== SOCIAL LINKS =====================
 export const SOCIAL_LINKS = [
-  { name: "GitHub", icon: FiGithub, url: "https://github.com/pradeepnigam9452", color: "hover:text-gray-400", bgColor: "hover:bg-gray-800" },
-  { name: "LinkedIn", icon: FiLinkedin, url: "https://www.linkedin.com/in/pradeep-nigam-601a85269", color: "hover:text-blue-400", bgColor: "hover:bg-blue-500/10" },
-  { name: "LeetCode", icon: FiTwitter, url: "https://leetcode.com/u/pradeep_nigam/", color: "hover:text-sky-400", bgColor: "hover:bg-sky-500/10" },
-  { name: "Email", icon: Mail, url: "pradeepnigam9452@gmail.com", color: "hover:text-red-400", bgColor: "hover:bg-red-100" },
+  {
+    name: "GitHub",
+    icon: FiGithub,
+    url: "https://github.com/pradeepnigam9452",
+  },
+  {
+    name: "LinkedIn",
+    icon: FiLinkedin,
+    url: "https://www.linkedin.com/in/pradeep-nigam-601a85269",
+  },
+  {
+    name: "Instagram",
+    icon: FaInstagram,
+    url: "https://www.instagram.com/_prince_nigam",
+  },
+  {
+    name: "WhatsApp",
+    icon: FaWhatsapp,
+    url: "https://wa.me/918305729451?text=Hi%20Pradeep%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project%20with%20you.",
+  },
+  {
+    name: "LeetCode",
+    icon: FiTwitter,
+    url: "https://leetcode.com/u/pradeep_nigam/",
+  },
+  {
+    name: "Email",
+    icon: Mail,
+    url: "mailto:pradeepnigam9452@gmail.com",
+  },
+];
+
+// ===================== FREELANCE SERVICES =====================
+export const FREELANCE_SERVICES = [
+  {
+    title: "Website Development",
+    description: "High-performance, modern, and SEO-optimized business websites tailored to convert visitors.",
+  },
+  {
+    title: "MERN Stack Development",
+    description: "End-to-end full stack web applications using MongoDB, Express, React, and Node.js.",
+  },
+  {
+    title: "Next.js Development",
+    description: "Lightning-fast Server-Side Rendered (SSR) & Static Site Generated (SSG) React apps.",
+  },
+  {
+    title: "React Development",
+    description: "Dynamic, scalable, and responsive component-driven frontends with state-of-the-art UI.",
+  },
+  {
+    title: "Backend & API Development",
+    description: "Secure, well-documented RESTful APIs, database design, and JWT user authentication.",
+  },
+  {
+    title: "Full-Stack Applications",
+    description: "Custom SaaS dashboards, internal admin systems, staff platforms, and online web apps.",
+  },
+  {
+    title: "Business Websites",
+    description: "Professional digital identity for agencies, law firms, salons, retail, and enterprises.",
+  },
+  {
+    title: "Custom Web Applications",
+    description: "Tailor-made web solutions designed around your exact business requirements and workflows.",
+  },
 ];
 
 // ===================== CONTACT INFO =====================
 export const CONTACT_INFO = [
-  { icon: MapPin, label: "Location", value: "Bhopal" },
-  { icon: Mail, label: "Email", value: "pradeepnigam9452gmail.com" },
+  { icon: MapPin, label: "Location", value: "Bhopal, Madhya Pradesh, India" },
+  { icon: Mail, label: "Email", value: "pradeepnigam9452@gmail.com" },
   { icon: Phone, label: "Phone", value: "+91 8305729451" },
 ];
-
-
-
