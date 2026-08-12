@@ -85,7 +85,29 @@ export default function About() {
                 Binarylogix Technology LLP — Developing staff portals, attendance & leave modules, and full-stack solutions.
               </p>
             </div>
+            
 
+             <div className="group rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-amber-400 hover:shadow-xl">
+  <div className="flex items-center justify-between">
+    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-700/10 text-amber-700 dark:bg-amber-400/20 dark:text-amber-300 group-hover:scale-110 transition-transform">
+      <Briefcase className="h-6 w-6" />
+    </div>
+
+    <span className="rounded-full bg-amber-700/10 px-3 py-1 text-xs font-bold text-amber-800 dark:bg-amber-400/20 dark:text-amber-300">
+      Previous Role
+    </span>
+  </div>
+
+  <h3 className="mt-4 text-lg font-bold text-[var(--text-main)]">
+    Frontend Developer
+  </h3>
+
+  <p className="mt-2 text-sm text-[var(--text-muted)] leading-relaxed">
+    Upstare Research, Bhopal — Worked on responsive and user-friendly
+    web interfaces, implementing modern frontend technologies and
+    improving overall user experience.
+  </p>
+</div>
             {/* Card 2: Technical Education */}
             <div className="group rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)] p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-teal-600 hover:shadow-xl">
               <div className="flex items-center justify-between">
