@@ -220,11 +220,11 @@
 //   );
 // }
 
-
 "use client";
 
 import { useState } from "react";
 import Image from "next/image";
+import type { StaticImageData } from "next/image";
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { livePROJECTS, PROJECTS } from "../data";
@@ -234,7 +234,7 @@ interface Project {
   id: string | number;
   title: string;
   description: string;
-  image: string;
+  image: StaticImageData;
   category?: string;
   tags: string[];
   liveUrl?: string;
